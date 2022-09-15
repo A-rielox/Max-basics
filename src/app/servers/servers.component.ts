@@ -1,4 +1,4 @@
-// VOY 38
+// VOY 38 de tablet
 
 import { Component, OnInit } from '@angular/core';
 
