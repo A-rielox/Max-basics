@@ -1,0 +1,21 @@
+<label>Server Name</label>
+<!-- 
+<input type="text" class="form-control" (input)="onUpdateServerName($event)" />
+<p>{{ serverName }}</p> 
+-->
+<!-- REEMPLAZANDO CON TWO-WAY BINDING -->
+<!-- actualiza el valor de la prop serverName a lo q este en el input, y lo q sea q tenga en la prop me lo pone en el value del input ( esto ultimo no lo hace la anterior ) -->
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+
+<button
+   class="btn btn-primary"
+   (click)="onCreateServer()"
+   [disabled]="!allowNewServer"
+>
+   Add Server
+</button>
+<p>{{ serverCreationStatus }}</p>
+
+<app-server></app-server>
+
+<!-- (input) es el input event q de dispara cada q el user tipea algo -->
